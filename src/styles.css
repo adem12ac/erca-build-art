@@ -38,8 +38,11 @@
 
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
-  --color-teal: var(--teal);
-  --color-teal-soft: var(--teal-soft);
+  --color-orange: var(--orange);
+  --color-orange-soft: var(--orange-soft);
+  --color-leaf: var(--leaf);
+  --color-teal: var(--orange);
+  --color-teal-soft: var(--orange-soft);
   --color-ink: var(--ink);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
@@ -58,12 +61,15 @@
 :root {
   --radius: 0.875rem;
 
-  /* Brand palette */
-  --navy-deep: oklch(0.22 0.08 260);
-  --navy: oklch(0.30 0.10 260);
-  --teal: oklch(0.72 0.13 195);
-  --teal-soft: oklch(0.86 0.07 195);
-  --ink: oklch(0.18 0.04 260);
+  /* Brand palette — gemäß ERCA Logo */
+  --navy-deep: oklch(0.24 0.10 263);
+  --navy: oklch(0.32 0.13 263);
+  --orange: oklch(0.71 0.17 50);
+  --orange-soft: oklch(0.90 0.06 60);
+  --leaf: oklch(0.66 0.18 142);
+  --teal: var(--orange);
+  --teal-soft: var(--orange-soft);
+  --ink: oklch(0.20 0.05 263);
   --surface: oklch(0.985 0.005 240);
   --surface-2: oklch(0.965 0.008 240);
   --hairline: oklch(0.90 0.012 245);
@@ -81,20 +87,20 @@
   --secondary: var(--surface-2);
   --secondary-foreground: var(--navy-deep);
   --muted: var(--surface-2);
-  --muted-foreground: oklch(0.48 0.02 260);
-  --accent: var(--teal);
-  --accent-foreground: oklch(0.15 0.03 260);
+  --muted-foreground: oklch(0.46 0.03 263);
+  --accent: var(--orange);
+  --accent-foreground: oklch(0.99 0 0);
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
   --border: var(--hairline);
   --input: var(--hairline);
-  --ring: var(--teal);
+  --ring: var(--orange);
 
   --chart-1: var(--navy);
-  --chart-2: var(--teal);
-  --chart-3: oklch(0.55 0.1 250);
-  --chart-4: oklch(0.75 0.1 200);
-  --chart-5: oklch(0.4 0.06 260);
+  --chart-2: var(--orange);
+  --chart-3: var(--leaf);
+  --chart-4: oklch(0.55 0.12 263);
+  --chart-5: oklch(0.4 0.06 263);
 
   --sidebar: oklch(0.99 0 0);
   --sidebar-foreground: var(--ink);
@@ -103,11 +109,12 @@
   --sidebar-accent: var(--surface-2);
   --sidebar-accent-foreground: var(--navy-deep);
   --sidebar-border: var(--hairline);
-  --sidebar-ring: var(--teal);
+  --sidebar-ring: var(--orange);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.08 260 / 0.92) 0%, oklch(0.30 0.10 260 / 0.78) 55%, oklch(0.40 0.10 240 / 0.55) 100%);
-  --gradient-accent: linear-gradient(135deg, var(--teal) 0%, oklch(0.62 0.14 220) 100%);
-  --shadow-elegant: 0 30px 60px -30px color-mix(in oklab, var(--navy-deep) 35%, transparent);
+  --gradient-hero: linear-gradient(135deg, oklch(0.24 0.10 263 / 0.92) 0%, oklch(0.30 0.12 263 / 0.72) 55%, oklch(0.40 0.10 263 / 0.45) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--orange) 0%, oklch(0.62 0.18 35) 100%);
+  --gradient-brand: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, oklch(0.42 0.14 263) 100%);
+  --shadow-elegant: 0 30px 60px -30px color-mix(in oklab, var(--navy-deep) 40%, transparent);
   --shadow-soft: 0 12px 30px -16px color-mix(in oklab, var(--navy-deep) 25%, transparent);
 }
 
@@ -133,7 +140,7 @@
 }
 
 @utility text-gradient {
-  background: linear-gradient(110deg, var(--teal) 10%, oklch(0.55 0.12 250) 90%);
+  background: linear-gradient(110deg, var(--orange) 0%, oklch(0.62 0.18 35) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
