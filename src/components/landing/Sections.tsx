@@ -18,11 +18,11 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section id="start" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden text-white">
+    <section id="start" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden text-white bg-navy-deep">
       <motion.div style={{ y }} className="absolute inset-0 -z-10">
-        <img src={heroAsset.url} alt="Bauleiter auf Baustelle" className="h-full w-full object-cover animate-hero-zoom" />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/30 to-transparent" />
+        <img src={heroAsset.url} alt="Bauleiter auf Baustelle bei Sonnenuntergang" loading="eager" className="h-full w-full object-cover animate-hero-zoom" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.20 0.10 263 / 0.78) 0%, oklch(0.24 0.10 263 / 0.55) 55%, oklch(0.30 0.10 263 / 0.35) 100%)" }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/55 to-navy-deep/10" />
       </motion.div>
 
       {/* Floating decorative elements */}
