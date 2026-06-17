@@ -21,8 +21,8 @@ export function Hero() {
     <section id="start" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden text-white bg-navy-deep">
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <img src={heroAsset.url} alt="Bauleiter auf Baustelle bei Sonnenuntergang" loading="eager" className="h-full w-full object-cover animate-hero-zoom" />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.20 0.10 263 / 0.82) 0%, oklch(0.24 0.10 263 / 0.60) 55%, oklch(0.30 0.10 263 / 0.40) 100%)" }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/60 to-navy-deep/15" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.20 0.10 263 / 0.70) 0%, oklch(0.24 0.10 263 / 0.45) 55%, oklch(0.30 0.10 263 / 0.25) 100%)" }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/35 to-transparent" />
       </motion.div>
 
       {/* Floating decorative elements */}
