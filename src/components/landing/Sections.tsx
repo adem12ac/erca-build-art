@@ -536,22 +536,22 @@ export function Kontakt() {
           </Reveal>
 
           <div className="mt-10 space-y-4">
-            <a href="tel:+4915000000000" className="flex items-center gap-4 group">
+            <a href="tel:+4915212971388" className="flex items-center gap-4 group">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <Phone size={20} />
               </span>
               <div>
                 <div className="text-xs uppercase tracking-wider text-white/60">Telefon</div>
-                <div className="font-semibold">+49 150 000 00 00</div>
+                <div className="font-semibold">+49 152 1297 1388</div>
               </div>
             </a>
-            <a href="mailto:info@erca-bauleitung.de" className="flex items-center gap-4 group">
+            <a href="mailto:info@erca-service.de" className="flex items-center gap-4 group">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <Mail size={20} />
               </span>
               <div>
                 <div className="text-xs uppercase tracking-wider text-white/60">E-Mail</div>
-                <div className="font-semibold">info@erca-bauleitung.de</div>
+                <div className="font-semibold">info@erca-service.de</div>
               </div>
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
@@ -616,7 +616,7 @@ export function Kontakt() {
                 </a>
               </div>
               {sent && (
-                <p className="text-sm text-teal-700">Ihre Anfrage wurde notiert. Wir melden uns innerhalb von 24 Stunden.</p>
+                <p className="text-sm text-orange">Ihre Anfrage wurde notiert. Wir melden uns innerhalb von 24 Stunden.</p>
               )}
             </div>
           </form>
