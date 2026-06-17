@@ -531,11 +531,20 @@ export function Kontakt() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-5 text-lg text-white/75 leading-relaxed max-w-md">
-              Kostenlose und unverbindliche Erstberatung. Wir melden uns innerhalb von 24 Stunden zurück.
+              Kostenlose und unverbindliche Erstberatung. Direkt mit Erkan Catak. Wir melden uns innerhalb von 24 Stunden zurück.
             </p>
           </Reveal>
 
           <div className="mt-10 space-y-4">
+            <div className="flex items-center gap-4">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-orange">
+                <Compass size={20} />
+              </span>
+              <div>
+                <div className="text-xs uppercase tracking-wider text-white/60">Adresse</div>
+                <div className="font-semibold">Juliusstraße 21, 45128 Essen</div>
+              </div>
+            </div>
             <a href="tel:+4915212971388" className="flex items-center gap-4 group">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <Phone size={20} />
