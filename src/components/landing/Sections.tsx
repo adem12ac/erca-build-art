@@ -376,7 +376,13 @@ export function UeberUns() {
             kicker="Über ERCA"
             title={<>Erfahrung, die Ihr Projekt <span className="text-gradient">schützt</span>.</>}
           />
-          <Reveal delay={0.15}>
+          <Reveal delay={0.12}>
+            <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-surface-2 border border-hairline px-4 py-2 text-sm font-semibold text-navy-deep">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-navy text-white text-xs">EC</span>
+              Erkan Catak · Inhaber & Bauleiter
+            </div>
+          </Reveal>
+          <Reveal delay={0.18}>
             <p className="mt-6 text-lg text-foreground/80 leading-relaxed">
               ERCA Bauleitung steht für etwas, das sich nicht zertifizieren lässt: über drei Jahrzehnte Praxis im Bau-, Technik- und Sanierungsbereich. Wir kennen die Fragen, die auf einer Baustelle wirklich entstehen — weil wir sie selbst gelöst haben.
             </p>
