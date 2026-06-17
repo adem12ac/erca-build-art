@@ -20,7 +20,7 @@ function DatenschutzPage() {
 
         <section className="mt-10 space-y-3">
           <h2 className="text-xl font-semibold">1. Verantwortlicher</h2>
-          <p>ERCA Bauleitung, Musterstraße 1, 12345 Musterstadt. E-Mail: info@erca-bauleitung.de</p>
+          <p>ERCA Bauleitung, Erkan Catak, Juliusstraße 21, 45128 Essen. Telefon: +49 152 1297 1388. E-Mail: info@erca-service.de</p>
         </section>
 
         <section className="mt-8 space-y-3">

@@ -18,11 +18,11 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section id="start" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden text-white">
-      <motion.div style={{ y }} className="absolute inset-0 -z-10">
-        <img src={heroAsset.url} alt="Bauleiter auf Baustelle" className="h-full w-full object-cover animate-hero-zoom" />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/30 to-transparent" />
+    <section id="start" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden text-white bg-navy-deep">
+      <motion.div style={{ y }} className="absolute inset-0 z-0">
+        <img src={heroAsset.url} alt="Bauleiter auf Baustelle bei Sonnenuntergang" loading="eager" className="h-full w-full object-cover animate-hero-zoom" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.20 0.10 263 / 0.70) 0%, oklch(0.24 0.10 263 / 0.45) 55%, oklch(0.30 0.10 263 / 0.25) 100%)" }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/35 to-transparent" />
       </motion.div>
 
       {/* Floating decorative elements */}
@@ -37,7 +37,7 @@ export function Hero() {
         style={{ animationDelay: "1.5s", background: "radial-gradient(circle at 30% 30%, rgba(94,234,212,0.35), transparent 70%)" }}
       />
 
-      <div className="container-px mx-auto max-w-7xl pt-36 md:pt-44 pb-28 md:pb-40 relative">
+      <div className="container-px mx-auto max-w-7xl pt-36 md:pt-44 pb-28 md:pb-40 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -376,7 +376,13 @@ export function UeberUns() {
             kicker="Über ERCA"
             title={<>Erfahrung, die Ihr Projekt <span className="text-gradient">schützt</span>.</>}
           />
-          <Reveal delay={0.15}>
+          <Reveal delay={0.12}>
+            <div className="mt-6 inline-flex items-center gap-3 rounded-full bg-surface-2 border border-hairline px-4 py-2 text-sm font-semibold text-navy-deep">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-navy text-white text-xs">EC</span>
+              Erkan Catak · Inhaber & Bauleiter
+            </div>
+          </Reveal>
+          <Reveal delay={0.18}>
             <p className="mt-6 text-lg text-foreground/80 leading-relaxed">
               ERCA Bauleitung steht für etwas, das sich nicht zertifizieren lässt: über drei Jahrzehnte Praxis im Bau-, Technik- und Sanierungsbereich. Wir kennen die Fragen, die auf einer Baustelle wirklich entstehen — weil wir sie selbst gelöst haben.
             </p>
@@ -531,27 +537,36 @@ export function Kontakt() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-5 text-lg text-white/75 leading-relaxed max-w-md">
-              Kostenlose und unverbindliche Erstberatung. Wir melden uns innerhalb von 24 Stunden zurück.
+              Kostenlose und unverbindliche Erstberatung. Direkt mit Erkan Catak. Wir melden uns innerhalb von 24 Stunden zurück.
             </p>
           </Reveal>
 
           <div className="mt-10 space-y-4">
-            <a href="tel:+4915000000000" className="flex items-center gap-4 group">
+            <div className="flex items-center gap-4">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-orange">
+                <Compass size={20} />
+              </span>
+              <div>
+                <div className="text-xs uppercase tracking-wider text-white/60">Adresse</div>
+                <div className="font-semibold">Juliusstraße 21, 45128 Essen</div>
+              </div>
+            </div>
+            <a href="tel:+4915212971388" className="flex items-center gap-4 group">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <Phone size={20} />
               </span>
               <div>
                 <div className="text-xs uppercase tracking-wider text-white/60">Telefon</div>
-                <div className="font-semibold">+49 150 000 00 00</div>
+                <div className="font-semibold">+49 152 1297 1388</div>
               </div>
             </a>
-            <a href="mailto:info@erca-bauleitung.de" className="flex items-center gap-4 group">
+            <a href="mailto:info@erca-service.de" className="flex items-center gap-4 group">
               <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <Mail size={20} />
               </span>
               <div>
                 <div className="text-xs uppercase tracking-wider text-white/60">E-Mail</div>
-                <div className="font-semibold">info@erca-bauleitung.de</div>
+                <div className="font-semibold">info@erca-service.de</div>
               </div>
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
@@ -616,7 +631,7 @@ export function Kontakt() {
                 </a>
               </div>
               {sent && (
-                <p className="text-sm text-teal-700">Ihre Anfrage wurde notiert. Wir melden uns innerhalb von 24 Stunden.</p>
+                <p className="text-sm text-orange">Ihre Anfrage wurde notiert. Wir melden uns innerhalb von 24 Stunden.</p>
               )}
             </div>
           </form>

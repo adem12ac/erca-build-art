@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export const WHATSAPP_URL = "https://wa.me/4915000000000";
+export const WHATSAPP_URL = "https://wa.me/4915212971388";
 
 export function WhatsAppButton() {
   return (
