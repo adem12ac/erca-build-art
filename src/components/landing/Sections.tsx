@@ -37,7 +37,7 @@ export function Hero() {
         style={{ animationDelay: "1.5s", background: "radial-gradient(circle at 30% 30%, rgba(94,234,212,0.35), transparent 70%)" }}
       />
 
-      <div className="container-px mx-auto max-w-7xl pt-36 md:pt-44 pb-28 md:pb-40 relative">
+      <div className="container-px mx-auto max-w-7xl pt-36 md:pt-44 pb-28 md:pb-40 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
