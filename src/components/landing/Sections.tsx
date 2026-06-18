@@ -18,11 +18,11 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   return (
-    <section id="start" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden text-white bg-navy-deep">
+    <section id="start" ref={ref} className="relative min-h-[100svh] w-full overflow-hidden text-foreground bg-surface">
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <img src={heroAsset.url} alt="Bauleiter auf Baustelle bei Sonnenuntergang" loading="eager" className="h-full w-full object-cover animate-hero-zoom" />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(0.20 0.10 263 / 0.70) 0%, oklch(0.24 0.10 263 / 0.45) 55%, oklch(0.30 0.10 263 / 0.25) 100%)" }} />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-navy-deep/35 to-transparent" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, oklch(1 0 0 / 0.88) 0%, oklch(1 0 0 / 0.64) 55%, oklch(1 0 0 / 0.38) 100%)" }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
       </motion.div>
 
       {/* Floating decorative elements */}
@@ -42,7 +42,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-white/90"
+          className="inline-flex items-center gap-2 rounded-full border border-navy-deep/15 bg-white/70 backdrop-blur px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-navy-deep"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-teal animate-pulse" />
           Unabhängige Bauleitung · Über 30 Jahre Erfahrung
@@ -62,7 +62,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.45 }}
-          className="mt-7 max-w-2xl text-lg md:text-xl text-white/85 leading-relaxed"
+          className="mt-7 max-w-2xl text-lg md:text-xl text-foreground/75 leading-relaxed"
         >
           Über 30 Jahre Erfahrung. Ein Ansprechpartner. Volle Kontrolle über Termine, Qualität und Kosten.
         </motion.p>
@@ -75,7 +75,7 @@ export function Hero() {
         >
           <a
             href="#kontakt"
-            className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-navy-deep shadow-elegant hover:shadow-[0_25px_50px_-15px_rgba(94,234,212,0.6)] transition-all duration-300"
+            className="group inline-flex items-center gap-2 rounded-full bg-navy px-7 py-4 text-sm font-semibold text-white shadow-elegant hover:shadow-[0_25px_50px_-15px_rgba(94,234,212,0.6)] transition-all duration-300"
           >
             Kostenlose Erstberatung
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -84,7 +84,7 @@ export function Hero() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 backdrop-blur px-7 py-4 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full border border-navy-deep/25 bg-navy-deep/5 backdrop-blur px-7 py-4 text-sm font-semibold text-navy-deep hover:bg-navy-deep/10 transition-colors"
           >
             <MessageCircle size={16} /> WhatsApp Kontakt
           </a>
@@ -95,7 +95,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.85 }}
-          className="mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/5 backdrop-blur"
+          className="mt-16 md:mt-24 grid grid-cols-2 md:grid-cols-4 gap-px overflow-hidden rounded-2xl border border-hairline bg-white/60 backdrop-blur"
         >
           {[
             { v: 30, suffix: "+", l: "Jahre Erfahrung" },
@@ -103,9 +103,9 @@ export function Hero() {
             { v: 1, suffix: "", l: "Ansprechpartner" },
             { v: 100, suffix: "%", l: "Unabhängig" },
           ].map((s) => (
-            <div key={s.l} className="bg-navy-deep/40 px-5 py-6">
-              <div className="text-3xl md:text-4xl font-bold text-white"><Counter to={s.v} />{s.suffix}</div>
-              <div className="mt-1 text-xs md:text-sm text-white/70 uppercase tracking-wider">{s.l}</div>
+            <div key={s.l} className="bg-white/70 px-5 py-6">
+              <div className="text-3xl md:text-4xl font-bold text-navy-deep"><Counter to={s.v} />{s.suffix}</div>
+              <div className="mt-1 text-xs md:text-sm text-muted-foreground uppercase tracking-wider">{s.l}</div>
             </div>
           ))}
         </motion.div>
@@ -113,10 +113,10 @@ export function Hero() {
 
       <motion.div
         style={{ opacity }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground"
       >
         <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
-        <div className="h-10 w-px bg-gradient-to-b from-white/60 to-transparent" />
+        <div className="h-10 w-px bg-gradient-to-b from-navy-deep/40 to-transparent" />
       </motion.div>
     </section>
   );
@@ -290,9 +290,9 @@ const ABLAUF = [
 
 export function Ablauf() {
   return (
-    <section id="ablauf" className="relative py-24 md:py-36 bg-navy-deep text-white overflow-hidden">
+    <section id="ablauf" className="relative py-24 md:py-36 bg-surface-2 text-foreground overflow-hidden">
       <div aria-hidden className="absolute inset-0 opacity-[0.08]" style={{
-        backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
+        backgroundImage: "radial-gradient(circle at 1px 1px, var(--navy) 1px, transparent 0)",
         backgroundSize: "32px 32px",
       }} />
       <div aria-hidden className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full" style={{ background: "radial-gradient(circle, var(--teal) 0%, transparent 60%)", opacity: 0.15 }} />
@@ -300,9 +300,9 @@ export function Ablauf() {
       <div className="container-px mx-auto max-w-7xl relative">
         <SectionHeader
           kicker="Ablauf"
-          title={<span className="text-white">So arbeiten wir mit Ihnen zusammen.</span>}
+          title={<span className="text-navy-deep">So arbeiten wir mit Ihnen zusammen.</span>}
         />
-        <p className="mt-5 max-w-2xl text-lg text-white/70 leading-relaxed">
+        <p className="mt-5 max-w-2xl text-lg text-muted-foreground leading-relaxed">
           Sechs klare Phasen. Jede Phase mit transparentem Ergebnis und nachvollziehbarer Dokumentation.
         </p>
 
@@ -323,11 +323,11 @@ export function Ablauf() {
                       </div>
                     </div>
                     <div className={`pl-16 md:pl-0 ${isRight ? "md:order-2 md:pl-16" : "md:pr-16 md:text-right"}`}>
-                      <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-teal ${isRight ? "" : "md:ml-auto"}`}>
+                      <div className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface border border-hairline text-orange ${isRight ? "" : "md:ml-auto"}`}>
                         <step.icon size={22} />
                       </div>
                       <h3 className="mt-4 text-2xl font-bold tracking-tight">{step.title}</h3>
-                      <p className="mt-2 text-white/70 leading-relaxed max-w-md md:inline-block">{step.text}</p>
+                      <p className="mt-2 text-muted-foreground leading-relaxed max-w-md md:inline-block">{step.text}</p>
                     </div>
                     <div className={`hidden md:block ${isRight ? "md:order-1" : ""}`} />
                   </div>
@@ -364,7 +364,7 @@ export function UeberUns() {
                 <BadgeCheck className="text-teal" size={32} />
                 <div>
                   <div className="text-2xl font-bold leading-none"><Counter to={30} />+ Jahre</div>
-                  <div className="text-xs text-white/70 uppercase tracking-wider mt-1">Bau- & Sanierungserfahrung</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider mt-1">Bau- & Sanierungserfahrung</div>
                 </div>
               </div>
             </div>
@@ -519,14 +519,14 @@ export function FAQ() {
 export function Kontakt() {
   const [sent, setSent] = useState(false);
   return (
-    <section id="kontakt" className="relative py-24 md:py-36 bg-navy-deep text-white overflow-hidden">
+    <section id="kontakt" className="relative py-24 md:py-36 bg-surface-2 text-foreground overflow-hidden">
       <div aria-hidden className="absolute -top-40 -left-20 h-[500px] w-[500px] rounded-full" style={{ background: "radial-gradient(circle, var(--teal) 0%, transparent 60%)", opacity: 0.15 }} />
       <div aria-hidden className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full" style={{ background: "radial-gradient(circle, oklch(0.5 0.15 250) 0%, transparent 60%)", opacity: 0.2 }} />
 
       <div className="container-px mx-auto max-w-7xl relative grid gap-14 lg:grid-cols-2 lg:items-start">
         <div>
           <Reveal>
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white/90">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/70 backdrop-blur border border-navy-deep/15 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-navy-deep">
               <span className="h-1 w-1 rounded-full bg-teal" /> Kontakt
             </div>
           </Reveal>
@@ -536,45 +536,45 @@ export function Kontakt() {
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-5 text-lg text-white/75 leading-relaxed max-w-md">
+            <p className="mt-5 text-lg text-muted-foreground leading-relaxed max-w-md">
               Kostenlose und unverbindliche Erstberatung. Direkt mit Erkan Catak. Wir melden uns innerhalb von 24 Stunden zurück.
             </p>
           </Reveal>
 
           <div className="mt-10 space-y-4">
             <div className="flex items-center gap-4">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-orange">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 border border-hairline text-orange">
                 <Compass size={20} />
               </span>
               <div>
-                <div className="text-xs uppercase tracking-wider text-white/60">Adresse</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">Adresse</div>
                 <div className="font-semibold">Juliusstraße 21, 45128 Essen</div>
               </div>
             </div>
             <a href="tel:+4915212971388" className="flex items-center gap-4 group">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 border border-hairline text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <Phone size={20} />
               </span>
               <div>
-                <div className="text-xs uppercase tracking-wider text-white/60">Telefon</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">Telefon</div>
                 <div className="font-semibold">+49 152 1297 1388</div>
               </div>
             </a>
             <a href="mailto:info@erca-service.de" className="flex items-center gap-4 group">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 border border-hairline text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <Mail size={20} />
               </span>
               <div>
-                <div className="text-xs uppercase tracking-wider text-white/60">E-Mail</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">E-Mail</div>
                 <div className="font-semibold">info@erca-service.de</div>
               </div>
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 border border-white/15 text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
+              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-surface-2 border border-hairline text-teal group-hover:bg-teal group-hover:text-navy-deep transition-colors">
                 <MessageCircle size={20} />
               </span>
               <div>
-                <div className="text-xs uppercase tracking-wider text-white/60">WhatsApp</div>
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">WhatsApp</div>
                 <div className="font-semibold">Direkte Nachricht senden</div>
               </div>
             </a>
