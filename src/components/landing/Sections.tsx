@@ -450,7 +450,7 @@ export function WhyERCA() {
 const FAQS = [
   { q: "Wann lohnt sich ein externer Bauleiter?", a: "Immer dann, wenn Sie keine eigene Bauleitung im Haus haben, aber dennoch professionelle Kontrolle über Termine, Qualität und Kosten benötigen. Besonders bei Sanierungen, Modernisierungen, Leerwohnungssanierungen und Umbauprojekten ist ein externer Bauleiter wirtschaftlicher als eine Festanstellung." },
   { q: "Was kostet eine Bauleitung?", a: "Die Vergütung erfolgt projektbezogen — entweder als prozentualer Anteil der Bausumme oder als Pauschale, abhängig von Umfang und Komplexität. Sie zahlen nur das, was tatsächlich erbracht wird. Keine Sozialabgaben, keine Fixkosten." },
-  { q: "Für welche Projekte eignet sich ERCA?", a: "Sanierungen, Modernisierungen, Umbauten, Leerwohnungssanierungen, Mehrfamilienhäuser und gewerbliche Objekte. Wir begleiten Eigentümer, Hausverwaltungen, Bauträger und Immobilieninvestoren." },
+  { q: "Für welche Projekte eignet sich ERCA?", a: "Sanierungen, Modernisierungen, Umbauten, Neubauten, Leerwohnungssanierungen, Mehrfamilienhäuser und gewerbliche Objekte. Wir begleiten Eigentümer, Hausverwaltungen, Bauträger und Immobilieninvestoren." },
   { q: "Wie läuft die Zusammenarbeit ab?", a: "Nach einem unverbindlichen Erstgespräch besichtigen wir das Objekt, entwickeln ein Maßnahmenkonzept und übernehmen anschließend die vollständige Bauleitung. Sie bleiben informiert, ohne sich um Detailprobleme kümmern zu müssen." },
   { q: "Werden auch Hausverwaltungen betreut?", a: "Ja. Für Hausverwaltungen übernehmen wir die Bauleitung bei Leerwohnungssanierungen und Modernisierungsmaßnahmen — inklusive Eigentümerdokumentation und Berichterstattung." },
   { q: "Werden Handwerker koordiniert?", a: "Vollständig. Wir steuern alle Gewerke aus einer Hand: Maler, Trockenbau, Fliesen, Boden, Elektro, Sanitär, Heizung, Fenster, Innenausbau und Rückbau. Die Handwerker sprechen mit uns, nicht mit Ihnen." },
@@ -586,6 +586,7 @@ export function Kontakt() {
                   <option>Sanierung</option>
                   <option>Modernisierung</option>
                   <option>Umbauprojekt</option>
+                  <option>Neubau</option>
                   <option>Leerwohnungssanierung</option>
                   <option>Hausverwaltung – mehrere Objekte</option>
                   <option>Sonstiges</option>
