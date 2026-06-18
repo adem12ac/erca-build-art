@@ -25,18 +25,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
       </motion.div>
 
-      {/* Floating decorative elements */}
-      <motion.div
-        aria-hidden
-        className="hidden md:block absolute top-[22%] right-[8%] h-24 w-24 rounded-2xl border border-white/20 backdrop-blur-md animate-float"
-        style={{ background: "linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02))" }}
-      />
-      <motion.div
-        aria-hidden
-        className="hidden md:block absolute bottom-[28%] left-[6%] h-16 w-16 rounded-full border border-teal/40 animate-float"
-        style={{ animationDelay: "1.5s", background: "radial-gradient(circle at 30% 30%, rgba(94,234,212,0.35), transparent 70%)" }}
-      />
-
       <div className="container-px mx-auto max-w-7xl pt-36 md:pt-44 pb-28 md:pb-40 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
