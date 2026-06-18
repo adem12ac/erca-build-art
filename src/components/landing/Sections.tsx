@@ -601,6 +601,19 @@ export function Kontakt() {
                   className="mt-2 w-full resize-none rounded-xl border border-hairline bg-surface px-4 py-3.5 text-sm focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition"
                 />
               </div>
+              <label className="flex items-start gap-3 text-sm text-muted-foreground">
+                <input
+                  type="checkbox"
+                  name="privacy"
+                  required
+                  className="mt-0.5 h-4 w-4 shrink-0 rounded border-hairline text-navy focus:ring-2 focus:ring-teal/20"
+                />
+                <span>
+                  Ich habe die{" "}
+                  <a href="/datenschutz" className="font-semibold text-navy underline underline-offset-2 hover:text-orange transition-colors">Datenschutzerklärung</a>{" "}
+                  gelesen und stimme der Verarbeitung meiner Daten zu. <span className="text-teal">*</span>
+                </span>
+              </label>
               <div className="flex flex-col sm:flex-row gap-3 pt-2">
                 <button
                   type="submit"
