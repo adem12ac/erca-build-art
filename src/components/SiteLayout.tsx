@@ -9,7 +9,6 @@ const NAV = [
   { href: "#start", label: "Start" },
   { href: "#leistungen", label: "Leistungen" },
   { href: "#vorteile", label: "Vorteile" },
-  { href: "#ablauf", label: "Ablauf" },
   { href: "#ueber", label: "Über Uns" },
   { href: "#faq", label: "FAQ" },
   { href: "#kontakt", label: "Kontakt" },
@@ -26,18 +25,23 @@ export function SiteHeader({ onHome = true }: { onHome?: boolean }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const linkFor = (href: string) =>
-    onHome ? href : `/${href}`;
+  const linkFor = (href: string) => (onHome ? href : `/${href}`);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-xl bg-white/85 border-b border-hairline shadow-[0_4px_30px_-20px_rgba(20,30,60,0.3)]" : "bg-transparent"
+        scrolled
+          ? "backdrop-blur-xl bg-white/85 border-b border-hairline shadow-[0_4px_30px_-20px_rgba(20,30,60,0.3)]"
+          : "bg-transparent"
       }`}
     >
       <div className="container-px mx-auto flex max-w-7xl items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="ERCA Bauleitung Logo" className="h-12 w-auto md:h-14 lg:h-16" />
+          <img
+            src={logoAsset.url}
+            alt="ERCA Bauleitung Logo"
+            className="h-12 w-auto md:h-14 lg:h-16"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
@@ -110,34 +114,60 @@ export function SiteFooter() {
     <footer className="bg-navy-deep text-white/85">
       <div className="container-px mx-auto max-w-7xl py-16 grid gap-12 md:grid-cols-3">
         <div>
-          <img src={logoAsset.url} alt="ERCA Bauleitung" className="h-16 w-auto mb-5 brightness-0 invert" />
+          <img
+            src={logoAsset.url}
+            alt="ERCA Bauleitung"
+            className="h-16 w-auto mb-5 brightness-0 invert"
+          />
           <p className="text-sm leading-relaxed text-white/70 max-w-sm">
-            Externe Bauleitung für Sanierungen, Modernisierungen und Umbauprojekte. Erfahrung, die Ihr Projekt schützt.
+            Externe Bauleitung für Sanierungen, Modernisierungen und Umbauprojekte. Erfahrung, die
+            Ihr Projekt schützt.
           </p>
           <p className="mt-5 text-sm font-semibold text-white">Erkan Catak</p>
           <p className="text-xs text-white/60">Inhaber · Bauleitung</p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">Navigation</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            Navigation
+          </h4>
           <ul className="space-y-2 text-sm">
             {NAV.map((n) => (
               <li key={n.href}>
-                <a href={`/${n.href}`} className="text-white/70 hover:text-orange transition-colors">{n.label}</a>
+                <a
+                  href={`/${n.href}`}
+                  className="text-white/70 hover:text-orange transition-colors"
+                >
+                  {n.label}
+                </a>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">Kontakt</h4>
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+            Kontakt
+          </h4>
           <ul className="space-y-2 text-sm text-white/70">
             <li>ERCA Bauleitung</li>
             <li>Juliusstraße 21, 45128 Essen</li>
-            <li><a href="tel:+4915212971388" className="hover:text-orange">+49 152 1297 1388</a></li>
-            <li><a href="mailto:info@erca-service.de" className="hover:text-orange">info@erca-service.de</a></li>
+            <li>
+              <a href="tel:+4915212971388" className="hover:text-orange">
+                +49 152 1297 1388
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@ercabauleitung.de" className="hover:text-orange">
+                info@ercabauleitung.de
+              </a>
+            </li>
           </ul>
           <div className="mt-6 flex gap-4 text-sm">
-            <Link to="/impressum" className="text-white/70 hover:text-orange">Impressum</Link>
-            <Link to="/datenschutz" className="text-white/70 hover:text-orange">Datenschutz</Link>
+            <Link to="/impressum" className="text-white/70 hover:text-orange">
+              Impressum
+            </Link>
+            <Link to="/datenschutz" className="text-white/70 hover:text-orange">
+              Datenschutz
+            </Link>
           </div>
         </div>
       </div>
