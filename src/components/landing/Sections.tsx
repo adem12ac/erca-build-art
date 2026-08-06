@@ -275,9 +275,9 @@ export function Leistungen() {
                     alt=""
                     aria-hidden="true"
                     loading="lazy"
-                    className="h-full w-full object-cover opacity-[0.14] transition-opacity duration-500 group-hover:opacity-[0.24]"
+                    className="h-full w-full object-cover opacity-[0.45] transition-opacity duration-500 group-hover:opacity-[0.6]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-white/45 via-white/88 to-white" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/15 via-white/60 to-white/95" />
                 </div>
                 <div
                   className="absolute -top-20 -right-20 h-48 w-48 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
