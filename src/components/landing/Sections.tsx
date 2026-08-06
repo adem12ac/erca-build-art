@@ -45,13 +45,9 @@ export function Hero() {
           className="h-full w-full object-cover animate-hero-zoom"
         />
         <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, oklch(1 0 0 / 0.88) 0%, oklch(1 0 0 / 0.64) 55%, oklch(1 0 0 / 0.38) 100%)",
-          }}
+          className="absolute inset-0 bg-gradient-to-br from-white/55 via-white/35 to-white/15 md:from-[oklch(1_0_0_/_0.88)] md:via-[oklch(1_0_0_/_0.64)] md:to-[oklch(1_0_0_/_0.38)]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/70 via-white/15 to-transparent md:from-white md:via-white/40 md:to-transparent" />
       </motion.div>
 
       <div className="container-px mx-auto max-w-7xl pt-36 md:pt-44 pb-28 md:pb-40 relative z-10">
